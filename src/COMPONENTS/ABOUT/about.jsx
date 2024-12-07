@@ -47,18 +47,19 @@ function about() {
         scrub: 2,
       }
     })
-    tl1.from(".aboutdetails li", {
-      y: 100,
-      opacity: 0,
-      stagger: 1,
-      scrollTrigger: {
-        trigger: ".aboutdetails h2",
-        scroll: "body",
-        start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
-      }
-    })
+    // tl1.from(".aboutdetails li", {
+    //   y: 100,
+    //   opacity: 0,
+    //   stagger: 1,
+    //   scrollTrigger: {
+    //     trigger: ".aboutdetails li",
+    //     scroll: "body",
+    //     start: "top 60%",
+    //     end: "top 30%",
+    //     scrub: 2,
+        
+    //   }
+    // })
     tl1.from(".card", {
       x: 100,
       opacity: 0,
