@@ -4,7 +4,7 @@ import man from '../../assets/man.png'
 import TypingEffect from "react-typing-effect";
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-function home() {
+function home(props) {
   useGSAP(()=>{
     let tl1 = gsap.timeline();
     tl1.from(".line1",{
@@ -33,7 +33,7 @@ function home() {
       <div className="lefthome">
         <div className="homedetails">
           <div className="line1">I'm</div>
-          <div className="line2">Meghraj</div>
+          <div className="line2">{props.name}</div>
             <div className="line3">
             <TypingEffect
               text={["Web Developer", "Software Developer", "Full Stack Developer"]}
