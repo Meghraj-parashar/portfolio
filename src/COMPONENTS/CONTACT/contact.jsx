@@ -1,11 +1,12 @@
-import React from 'react'
-import './contact.css'
-import contactimg from '../../assets/contact.png'
+// import React from 'react';
+import './contact.css';
+import contactimg from '../../assets/contact.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
-function contact() {
+
+function Contact() {
   useGSAP(() => {
     let tl1 = gsap.timeline();
     tl1.from(".leftcontact img", {
@@ -19,21 +20,22 @@ function contact() {
         end: "top 30%",
         scrub: 2,
       }
-    })
+    });
     let tl2 = gsap.timeline();
     tl2.from(".rightcontact form", {
-        x: 100,
-        opacity: 0,
-        stagger: 1,
-        scrollTrigger: {
-          trigger: ".rightcontact form",
-          scroll: "body",
-          start: "top 60%",
-          end: "top 30%",
-          scrub: 2,
-        }
-      })
-  })
+      x: 100,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".rightcontact form",
+        scroll: "body",
+        start: "top 60%",
+        end: "top 30%",
+        scrub: 2,
+      }
+    });
+  });
+
   return (
     <div id='contact' className='contact'>
       <div className='leftcontact'>
@@ -49,7 +51,7 @@ function contact() {
         <div className='socials'></div>
       </div>
     </div>
-  )
+  );
 }
 
-export default contact
+export default Contact;

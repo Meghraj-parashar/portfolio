@@ -1,38 +1,35 @@
-import React, { useRef } from 'react'
-import './Navbar.css'
-import { Link } from 'react-scroll'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-function navbar() {
+import  { useRef } from 'react';
+import './Navbar.css';
+import { Link } from 'react-scroll';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
+function Navbar() {
   const menu = useRef(null);
   const mobile = useRef(null);
   const toggleMenu = () => {
     mobile.current.classList.toggle('activemobilemenu');
     menu.current.classList.toggle('activehamburger');
-  }
-useGSAP(()=>{
-  let tl1 = gsap.timeline();
-  tl1.from("nav h1",{
-    y:-100,
-    opacity:0,
-    delay:0.5,
-    stagger:0.2,
-    duration:1,
-  },
-  [menu,mobile])
-  tl1.from("li", {
-    y: -100,
-    opacity: 0,
-    delay: 0.5,
-    stagger: 0.2,
-    duration: 1,
-  //   Background: 'red',
-  // BackgroundClip: 'text',
-  color: 'red'
+  };
 
-  })
- 
-})
+  useGSAP(() => {
+    let tl1 = gsap.timeline();
+    tl1.from("nav h1", {
+      y: -100,
+      opacity: 0,
+      delay: 0.5,
+      stagger: 0.2,
+      duration: 1,
+    }, [menu, mobile]);
+    tl1.from("li", {
+      y: -100,
+      opacity: 0,
+      delay: 0.5,
+      stagger: 0.2,
+      duration: 1,
+      color: 'red'
+    });
+  });
 
   return (
     <nav>
@@ -51,12 +48,12 @@ useGSAP(()=>{
           <li>CONTACT</li>
         </Link>
       </ul>
-      <div className='hamburger' ref={menu} onClick={toggleMenu} >
+      <div className='hamburger' ref={menu} onClick={toggleMenu}>
         <div className='ham'></div>
         <div className='ham'></div>
         <div className='ham'></div>
       </div>
-      <ul className='mobilemenu' ref={mobile} >
+      <ul className='mobilemenu' ref={mobile}>
         <Link to="home" activeClass="active" spy={true} smooth={true} duration={500}>
           <li>HOME</li>
         </Link>
@@ -71,7 +68,7 @@ useGSAP(()=>{
         </Link>
       </ul>
     </nav>
-  )
+  );
 }
 
-export default navbar
+export default Navbar;
