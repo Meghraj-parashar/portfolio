@@ -64,4 +64,8 @@ Animations are implemented using **GSAP** (GreenSock Animation Platform) along w
 
 ---
 
-## Project Structure
+## Project StructureBelow is the project structure code formatted as a Markdown code block. You can simply paste it into your README.md file:
+
+
+
+portfolio/ ├── .gitignore ├── package.json ├── package-lock.json ├── README.md ├── eslint.config.js ├── index.html ├── vite.config.js └── src/ ├── App.jsx ├── assets/ │   ├── man.png         // Home section image │   ├── mern.png        // Skill card image for MERN Stack │   ├── java.png        // Skill card image for Java │   ├── dsa.png         // Skill card image for DSA │   └── contact.png     // Contact section image └── COMPONENTS/ ├── NAV/ │   ├── Navbar.jsx │   └── Navbar.css ├── HOME/ │   ├── home.jsx │   └── home.css ├── ABOUT/ │   ├── about.jsx │   └── about.css ├── CARD/ │   ├── card.jsx │   └── card.css └── CONTACT/ ├── contact.jsx └── contact.css
